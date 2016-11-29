@@ -11,7 +11,8 @@ var files = {
 	css: {
 		vendor: [
 			'bower_components/bootstrap/dist/css/bootstrap.min.css',
-			'bower_components/font-awesome/css/font-awesome.min.css'
+			'bower_components/font-awesome/css/font-awesome.min.css',
+			'bower_components/fullpage.js/dist/jquery.fullpage.min.css'
 		],
 		custom: [dir_path+'assets/css/*.css'],
 		sassFile: [dir_path+'assets/styles/*.scss']
@@ -19,7 +20,8 @@ var files = {
 	js: {
 		vendor: [
 			'bower_components/jquery/dist/jquery.min.js',
-			'bower_components/bootstrap/dist/js/bootstrap.min.js'
+			'bower_components/bootstrap/dist/js/bootstrap.min.js',
+			'bower_components/fullpage.js/dist/jquery.fullpage.min.js'
 		],
 		custom: [
 			'./assets/js/app.js'
