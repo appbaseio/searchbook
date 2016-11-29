@@ -1,0 +1,10 @@
+{
+  "name": "searchbook",
+  "description": "Search onboarding",
+  "main": "index.js",
+  "authors": [
+    "Deepak Grover"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/appbaseio/searchbook"
+}
