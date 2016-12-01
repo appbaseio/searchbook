@@ -5,6 +5,8 @@ import Onboarding from 'appbase-onboarding';
 import { dataOperation } from '../services/DataOperation';
 import LoginScreen from '../shared/LoginScreen';
 import AppCreation from './steps/AppCreation';
+import UpdateMapping from './steps/UpdateMapping';
+import IndexData from './steps/IndexData';
 
 class Main extends Component {
 	constructor(props) {
@@ -49,6 +51,8 @@ class Main extends Component {
 			view = (
 				<Onboarding brandImage='' steps={steps}>
 					<AppCreation key={0} />
+					<UpdateMapping key={1} />
+					<IndexData key={2} />
 				</Onboarding>
 			);
 		}

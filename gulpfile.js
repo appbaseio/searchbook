@@ -21,7 +21,12 @@ var files = {
 		vendor: [
 			'bower_components/jquery/dist/jquery.min.js',
 			'bower_components/bootstrap/dist/js/bootstrap.min.js',
-			'bower_components/fullpage.js/dist/jquery.fullpage.min.js'
+			'bower_components/fullpage.js/dist/jquery.fullpage.min.js',
+			'bower_components/lodash/dist/lodash.min.js',
+			'bower_components/crypto-js/crypto-js.js',
+			'bower_components/lzma/src/lzma.js',
+			'bower_components/urlsafe-base64/app.js',
+			'bower_components/appbase-js/browser/appbase.min.js'
 		],
 		custom: [
 			'./assets/js/app.js'
@@ -84,6 +89,13 @@ gulp.task('moveImages', function() {
 		.pipe(gulp.dest('dist/images'));
 });
 
+// Include dependency in dist
+gulp.task('move_js_depends', function() {
+	return gulp.src(['bower_components/lzma/src/lzma_worker.js',
+		'assets/vendor/JSONURL.js'])
+		.pipe(gulp.dest('dist/vendor'));
+});
+
 gulp.task('compact', [
 	'customcss',
 	'vendorcss',
@@ -91,7 +103,8 @@ gulp.task('compact', [
 	'customjs',
 	'moveCss',
 	'moveFonts',
-	'moveImages'
+	'moveImages',
+	'move_js_depends'
 ]);
 
 gulp.task('watchfiles', function() {
